@@ -1,0 +1,491 @@
+/*=================================================
+ *  Le css comporte 2 parties:
+ * - La 1ère partie contient les styles des entêtes, body et footer
+ * - La 2ème partie contient les styles des pages de chacun
+ *
+ * TODO: Ajouter le style correspondant à votre page à la suite de ce css en précisant le titre de votre page
+ */
+/*________________________________________________________________________________________________________________
+  ________________________________________________________________________________________________________________*/
+
+/*=================================================
+ * header et son menu deroulant
+ */
+header {
+    background: #00cccc;
+    height: 102px;
+    border-bottom: 2px solid #006666;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font: normal 12px verdana, sans-serif;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+header li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+header li.home {
+    width: 50px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+header li.home a {
+    padding: 0;
+    background: transparent;
+}
+
+header li.home a img {
+    width: 30px;
+}
+
+header li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+header li.dropdown {
+    display: inline-block;
+}
+
+header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+header .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+header .dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*=================================================
+ * body
+ */
+
+body {
+    height: 75%;
+    margin: 10px;
+}
+
+body p {
+    text-align: left;
+    font: normal 15px verdana, sans-serif;
+    padding-left: 10px;
+    margin: 0;
+}
+
+header div {
+    padding-bottom: 0px !important;
+}
+
+body div {
+    padding-bottom: 50px;
+}
+
+/*=================================================
+ * footer
+ */
+footer {
+    background: #cc0000;
+    height: 50px;
+    border-top: 2px solid #660000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font: normal 11px verdana, sans-serif;
+    padding-top: 12px;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+/*________________________________________________________________________________________________________________
+  ________________________________________________________________________________________________________________*/
+
+/*=================================================
+ * Page de login et de profil ?
+ */
+#logo {
+    text-align: center;
+    margin-top: 120px;
+}
+
+#contenu {
+    margin-top: 120px;
+    font: normal 12px verdana, sans-serif;
+}
+
+#contenu #registerForm {
+    text-align: center;
+}
+
+#contenu #registerForm input {
+    margin-top: 10px;
+}
+
+#contenu #complements img {
+    float: left;
+    margin-right: 25px;
+    width: 25%;
+}
+
+#contenu .error {
+    text-align: center;
+    color: red;
+}
+
+/*=================================================
+ *  Page produit
+ */
+#phead {
+    font-size: 50px;
+    text-align: center;
+    color: blue;
+}
+
+#produit {
+    text-align: center;
+}
+
+#produit img {
+    height: 400px;
+}
+
+#decription1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#decription2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#prix {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+
+#panier {
+    height: 50px;
+    position: fixed;
+    top: 140px;
+    right: 50px;
+}
+
+/*=================================================
+ * Page produit list
+ */
+
+.produit_list {
+    height: 41%;
+    margin-top: 10px;
+}
+
+.produit_list hr {
+    margin-left: 0px;
+    width: 35%;
+}
+
+.image_produit {
+    float: left;
+    width: 15%;
+    height: 41%;
+    border-right: 1px solid gray;
+}
+
+.image_produit img {
+    width: 80%;
+    padding: 15px;
+}
+
+.content_produit {
+    margin-left: 15%;
+    font-size: 16px;
+    height: 70%;
+}
+
+.content_produit span {
+    padding: 5px;
+}
+
+.content_produit span.description {
+    padding: 10px;
+}
+
+/*=================================================
+ *  Page panier, tunnel de commande
+ */
+label {
+    font-size: 16px;
+}
+
+.custom-dropdown--large {
+    font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+    font-size: 2.7em;
+}
+
+.custom-dropdown__select {
+    font-size: inherit; /* inherit size from .custom-dropdown */
+    padding: .5em; /* add some space*/
+    margin: 0; /* remove default margins */
+}
+
+.custom-dropdown__select--white {
+    background-color: #EEE;
+}
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+        border: 0;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 2.5em;
+        font-size: .5em;
+        line-height: 1;
+        right: 0.5em;
+        top: 50%;
+        margin-top: -.5em;
+        background-color: #EEE;
+    }
+
+    .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0, 0, 0, .3);
+    }
+
+    .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0, 0, 0, .1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        top: .5em;
+        bottom: .5em;
+        border-left: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    .custom-dropdown--white::after {
+        color: rgba(0, 0, 0, .9);
+    }
+
+    /* FF only temp fix */
+    @-moz-document url-prefix() {
+        .custom-dropdown__select {
+            padding-right: .9em
+        }
+        .custom-dropdown--large .custom-dropdown__select {
+            padding-right: 1.3em
+        }
+        .custom-dropdown--small .custom-dropdown__select {
+            padding-right: .5em
+        }
+    }
+}
+
+/*=================================================
+ *  Page administration utilisateur
+ */
+body .admin table {
+    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+}
+
+body .admin td { /* Pour vue administration user */
+    border: 1px solid black;
+    text-align: center;
+}
+
+body .admin th {
+    border: 1px solid black;
+}
+
+/*===================
+ * Historique commande
+ */
+#historique {
+    text-align: center;
+
+}
+
+#historique h1 {
+    color: red;
+}
+
+#historique table {
+    text-align: center;
+
+}
+
+.encadrement {
+    border: 1px solid black;
+    width: 98%;
+    margin: auto;
+
+}
+
+.encadrement td {
+    width: 25%;
+    color: #000000;
+}
+
+#tableauTotal {
+
+    width: 100%;
+    margin: auto;
+    line-height: 24px;
+    margin: auto;
+}
+
+#tableauTotal tr td {
+    border: 1px solid black;
+    line-height: 24px;
+}
+
+.tablePanier {
+    width: 100%;
+    line-height: 24px;
+    margin: auto;
+
+}
+
+.tablePanier tr td {
+    border: 1px solid black;
+}
+
+.encadrement:hover table {
+    display: inline-table;
+}
+
+.tableCommande {
+    display: none;
+    margin: auto;
+    width: 90%;
+    line-height: 24px;
+}
+
+.tableCommande tr {
+    border: 2px solid yellow;
+}
+
+.tableCommande tr td {
+    border: 2px solid GoldenRod;
+}
+
+/*=================================================
+ *  Page formulaire d'ajout, modification et suppression produit
+ */
+
+.admin_form table {
+    font-family: "Roboto", serif;
+    font-weight: bold;
+}
+
+.admin_form table tr {
+    line-height: 2;
+}
+
+.admin_form table label {
+    display: block;
+    width: 460px;
+    float: left;
+}
+
+.admin_form #sous_categorie {
+    display: block;
+    float: left;
+}
+
+.admin_form #categorie {
+    display: block;
+    float: left;
+}
+
+.admin_form #Check {
+    width: 25px;
+}
+
+
+
